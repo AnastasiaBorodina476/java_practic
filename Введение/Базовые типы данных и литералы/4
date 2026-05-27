@@ -32,7 +32,6 @@ public class Main {
         // Смешанная конкатенация
         String name = "Настя";
         int age = 20;
-        double height = 165.5;
         
         System.out.println("Меня зовут " + name + ", мне " + age + " лет");
         
