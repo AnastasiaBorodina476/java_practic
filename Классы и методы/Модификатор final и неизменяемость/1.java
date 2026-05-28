@@ -1,21 +1,26 @@
-class A {
+public class A {
     public final int a;
     
+    // Вариант 1: инициализация при объявлении
+    // public final int a = 10;
+    
+    // Вариант 2: инициализация в конструкторе
     public A() {
         a = 10;
     }
     
+    // Вариант 3: инициализация в конструкторе с параметром
     public A(int value) {
         a = value;
     }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        A obj1 = new A();
-        System.out.println(obj1.a);
-        
-        A obj2 = new A(30);
-        System.out.println(obj2.a);
+    
+    // Вариант 4: инициализация в блоке инициализации (нестатическом)
+    {
+        a = 10;
+    }
+    
+    // Вариант 5: инициализация через this() вызов другого конструктора
+    public A(boolean flag) {
+        this(20);
     }
 }
